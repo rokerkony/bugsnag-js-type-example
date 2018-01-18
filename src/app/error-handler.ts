@@ -1,9 +1,10 @@
 import {ErrorHandler, Injectable} from '@angular/core';
+import {Bugsnag} from 'bugsnag-js';
 import Report from 'bugsnag-js/types/report';
 
 @Injectable()
 export class AngularBugsnagErrorHandler extends ErrorHandler {
-  constructor (private client: any) {
+  constructor (private client: Bugsnag.Client) {
     super();
   }
 
